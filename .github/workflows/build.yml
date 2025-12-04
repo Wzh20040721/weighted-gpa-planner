@@ -54,21 +54,21 @@ jobs:
 
     - name: Upload Windows artifact
       if: matrix.os == 'windows-latest'
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: Windows-Build
         path: 加权平均分规划助手-Windows.zip
 
     - name: Upload macOS artifact
       if: matrix.os == 'macos-latest'
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: macOS-Build
         path: 加权平均分规划助手-macOS.zip
 
     - name: Upload Linux artifact
       if: matrix.os == 'ubuntu-latest'
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: Linux-Build
         path: 加权平均分规划助手-Linux.tar.gz
@@ -81,7 +81,7 @@ jobs:
     
     steps:
     - name: Download all artifacts
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
 
     - name: Create Release
       uses: softprops/action-gh-release@v1
