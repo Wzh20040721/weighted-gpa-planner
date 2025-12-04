@@ -1,0 +1,70 @@
+{
+  "completed": [
+    {
+      "id": "c001",
+      "name": "高等数学B",
+      "credit": 4.5,
+      "score": 88
+    },
+    {
+      "id": "c002",
+      "name": "大学英语",
+      "credit": 3,
+      "score": 81
+    },
+    {
+      "id": "c003",
+      "name": "线性代数A",
+      "credit": 3,
+      "score": 90
+    },
+    {
+      "id": "c004",
+      "name": "管理学",
+      "credit": 3,
+      "score": 82
+    },
+    {
+      "id": "c005",
+      "name": "数理统计",
+      "credit": 4,
+      "score": 94
+    }
+  ],
+  "planned": [
+    {
+      "id": "p001",
+      "name": "数据结构与算法",
+      "credit": 3,
+      "min_score": 70,
+      "max_score": 95,
+      "difficulty": 0.8
+    },
+    {
+      "id": "p002",
+      "name": "数据库与数据仓库",
+      "credit": 3,
+      "min_score": 75,
+      "max_score": 92,
+      "difficulty": 0.6
+    },
+    {
+      "id": "p003",
+      "name": "Web程序设计与应用",
+      "credit": 2.5,
+      "min_score": 80,
+      "max_score": 98,
+      "difficulty": 0.3
+    },
+    {
+      "id": "p004",
+      "name": "软件工程",
+      "credit": 2.5,
+      "min_score": 65,
+      "max_score": 90,
+      "difficulty": 0.7
+    }
+  ],
+  "targetScore": 87,
+  "version": "2.0"
+}

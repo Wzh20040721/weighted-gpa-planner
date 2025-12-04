@@ -1,0 +1,96 @@
+name: Build Cross-Platform Executables
+
+on:
+  push:
+    tags:
+      - 'v*'  # 当推送 v1.0, v2.0 等标签时触发
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  build:
+    name: Build on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+        python-version: ['3.11']
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Build with PyInstaller (Windows)
+      if: matrix.os == 'windows-latest'
+      run: |
+        pyinstaller --clean build.spec
+        Compress-Archive -Path dist\加权平均分规划助手.exe -DestinationPath 加权平均分规划助手-Windows.zip
+      shell: pwsh
+
+    - name: Build with PyInstaller (macOS)
+      if: matrix.os == 'macos-latest'
+      run: |
+        pyinstaller --clean build.spec
+        cd dist
+        zip -r ../加权平均分规划助手-macOS.zip 加权平均分规划助手.app
+        cd ..
+
+    - name: Build with PyInstaller (Linux)
+      if: matrix.os == 'ubuntu-latest'
+      run: |
+        pyinstaller --clean build.spec
+        cd dist
+        tar -czf ../加权平均分规划助手-Linux.tar.gz 加权平均分规划助手
+        cd ..
+
+    - name: Upload Windows artifact
+      if: matrix.os == 'windows-latest'
+      uses: actions/upload-artifact@v3
+      with:
+        name: Windows-Build
+        path: 加权平均分规划助手-Windows.zip
+
+    - name: Upload macOS artifact
+      if: matrix.os == 'macos-latest'
+      uses: actions/upload-artifact@v3
+      with:
+        name: macOS-Build
+        path: 加权平均分规划助手-macOS.zip
+
+    - name: Upload Linux artifact
+      if: matrix.os == 'ubuntu-latest'
+      uses: actions/upload-artifact@v3
+      with:
+        name: Linux-Build
+        path: 加权平均分规划助手-Linux.tar.gz
+
+  release:
+    name: Create Release
+    needs: build
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    
+    steps:
+    - name: Download all artifacts
+      uses: actions/download-artifact@v3
+
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          Windows-Build/加权平均分规划助手-Windows.zip
+          macOS-Build/加权平均分规划助手-macOS.zip
+          Linux-Build/加权平均分规划助手-Linux.tar.gz
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

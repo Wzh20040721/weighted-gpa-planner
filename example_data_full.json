@@ -1,0 +1,422 @@
+{
+  "completed": [
+    {
+      "id": "c001",
+      "name": "数据科学算法导论",
+      "credit": 1.5,
+      "score": 92
+    },
+    {
+      "id": "c002",
+      "name": "信息资源管理A",
+      "credit": 1.5,
+      "score": 85
+    },
+    {
+      "id": "c003",
+      "name": "形势与政策",
+      "credit": 0.3,
+      "score": 90
+    },
+    {
+      "id": "c004",
+      "name": "管理信息系统",
+      "credit": 2.5,
+      "score": 82
+    },
+    {
+      "id": "c005",
+      "name": "数据挖掘与商务智能",
+      "credit": 3,
+      "score": 86
+    },
+    {
+      "id": "c006",
+      "name": "IT项目管理",
+      "credit": 2,
+      "score": 95
+    },
+    {
+      "id": "c007",
+      "name": "Web程序设计与应用",
+      "credit": 2.5,
+      "score": 89
+    },
+    {
+      "id": "c008",
+      "name": "形势与政策",
+      "credit": 0.3,
+      "score": 90
+    },
+    {
+      "id": "c009",
+      "name": "Web开发（课程设计）",
+      "credit": 2,
+      "score": 98
+    },
+    {
+      "id": "c010",
+      "name": "软件工程与测试基础",
+      "credit": 2.5,
+      "score": 96
+    },
+    {
+      "id": "c011",
+      "name": "电影音乐赏析",
+      "credit": 1.5,
+      "score": 88
+    },
+    {
+      "id": "c012",
+      "name": "信息分析与预测（R语言）",
+      "credit": 2.5,
+      "score": 86
+    },
+    {
+      "id": "c013",
+      "name": "信息安全导论",
+      "credit": 2,
+      "score": 87
+    },
+    {
+      "id": "c014",
+      "name": "病毒与生命",
+      "credit": 1.5,
+      "score": 97
+    },
+    {
+      "id": "c015",
+      "name": "组织行为学",
+      "credit": 2,
+      "score": 80
+    },
+    {
+      "id": "c016",
+      "name": "专门用途英语",
+      "credit": 1.5,
+      "score": 92
+    },
+    {
+      "id": "c017",
+      "name": "艺术感知",
+      "credit": 1,
+      "score": 82
+    },
+    {
+      "id": "c018",
+      "name": "数据挖掘与商务智能（课程设计）",
+      "credit": 2,
+      "score": 94
+    },
+    {
+      "id": "c019",
+      "name": "习近平新时代中国特色社会主义思想概论",
+      "credit": 3,
+      "score": 85
+    },
+    {
+      "id": "c020",
+      "name": "毛泽东思想和中国特色社会主义理论体系概论",
+      "credit": 3,
+      "score": 88
+    },
+    {
+      "id": "c021",
+      "name": "网页设计理论与实务",
+      "credit": 2,
+      "score": 90
+    },
+    {
+      "id": "c022",
+      "name": "统计学原理",
+      "credit": 3,
+      "score": 90
+    },
+    {
+      "id": "c023",
+      "name": "形势与政策",
+      "credit": 0.3,
+      "score": 90
+    },
+    {
+      "id": "c024",
+      "name": "跨文化交际英语",
+      "credit": 1.5,
+      "score": 77
+    },
+    {
+      "id": "c025",
+      "name": "跨文化交际英语",
+      "credit": 1.5,
+      "score": 83
+    },
+    {
+      "id": "c026",
+      "name": "供应链与物流管理",
+      "credit": 2.5,
+      "score": 66
+    },
+    {
+      "id": "c027",
+      "name": "数据结构与算法",
+      "credit": 3,
+      "score": 71
+    },
+    {
+      "id": "c028",
+      "name": "体育",
+      "credit": 1.6,
+      "score": 82
+    },
+    {
+      "id": "c029",
+      "name": "设计与生活",
+      "credit": 1,
+      "score": 85
+    },
+    {
+      "id": "c030",
+      "name": "宏观经济学",
+      "credit": 3,
+      "score": 81
+    },
+    {
+      "id": "c031",
+      "name": "管理模型与决策基础",
+      "credit": 3,
+      "score": 90
+    },
+    {
+      "id": "c032",
+      "name": "数理统计",
+      "credit": 4,
+      "score": 94
+    },
+    {
+      "id": "c033",
+      "name": "形势与政策",
+      "credit": 0.3,
+      "score": 90
+    },
+    {
+      "id": "c034",
+      "name": "基于EXCEL的商业数据分析",
+      "credit": 2.5,
+      "score": 82
+    },
+    {
+      "id": "c035",
+      "name": "数据库与数据仓库",
+      "credit": 3,
+      "score": 67
+    },
+    {
+      "id": "c036",
+      "name": "马克思主义基本原理",
+      "credit": 3,
+      "score": 88
+    },
+    {
+      "id": "c037",
+      "name": "日本影视艺术欣赏",
+      "credit": 1,
+      "score": 91
+    },
+    {
+      "id": "c038",
+      "name": "专门用途英语",
+      "credit": 1.5,
+      "score": 83
+    },
+    {
+      "id": "c039",
+      "name": "商务数据分析（R语言）",
+      "credit": 2.5,
+      "score": 89
+    },
+    {
+      "id": "c040",
+      "name": "计量经济学",
+      "credit": 3,
+      "score": 85
+    },
+    {
+      "id": "c041",
+      "name": "莎士比亚戏剧欣赏",
+      "credit": 1,
+      "score": 95
+    },
+    {
+      "id": "c042",
+      "name": "高等数学B",
+      "credit": 4.5,
+      "score": 88
+    },
+    {
+      "id": "c043",
+      "name": "大学英语",
+      "credit": 3,
+      "score": 81
+    },
+    {
+      "id": "c044",
+      "name": "管理学",
+      "credit": 3,
+      "score": 82
+    },
+    {
+      "id": "c045",
+      "name": "经济法A",
+      "credit": 2.5,
+      "score": 83
+    },
+    {
+      "id": "c046",
+      "name": "形势与政策",
+      "credit": 0.5,
+      "score": 90
+    },
+    {
+      "id": "c047",
+      "name": "会计学基础",
+      "credit": 3,
+      "score": 71
+    },
+    {
+      "id": "c048",
+      "name": "市场营销学A",
+      "credit": 2.5,
+      "score": 88
+    },
+    {
+      "id": "c049",
+      "name": "中国近现代史纲要",
+      "credit": 3,
+      "score": 85
+    },
+    {
+      "id": "c050",
+      "name": "高等数学B",
+      "credit": 4.5,
+      "score": 80
+    },
+    {
+      "id": "c051",
+      "name": "思想道德与法治",
+      "credit": 3,
+      "score": 87
+    },
+    {
+      "id": "c052",
+      "name": "大学生计算与信息化素养",
+      "credit": 2.5,
+      "score": 87
+    },
+    {
+      "id": "c053",
+      "name": "形势与政策",
+      "credit": 0.5,
+      "score": 90
+    },
+    {
+      "id": "c054",
+      "name": "体育",
+      "credit": 2.3,
+      "score": 80
+    },
+    {
+      "id": "c055",
+      "name": "多媒体演示",
+      "credit": 1,
+      "score": 95
+    },
+    {
+      "id": "c056",
+      "name": "体育",
+      "credit": 2.3,
+      "score": 82
+    },
+    {
+      "id": "c057",
+      "name": "线性代数A",
+      "credit": 3,
+      "score": 90
+    },
+    {
+      "id": "c058",
+      "name": "饮食与健康",
+      "credit": 1,
+      "score": 82
+    },
+    {
+      "id": "c059",
+      "name": "大学英语",
+      "credit": 3,
+      "score": 80
+    },
+    {
+      "id": "c060",
+      "name": "电子商务概论",
+      "credit": 3,
+      "score": 77
+    },
+    {
+      "id": "c061",
+      "name": "微观经济学",
+      "credit": 3,
+      "score": 87
+    }
+  ],
+  "planned": [
+    {
+      "id": "p001",
+      "name": "人工智能基础",
+      "credit": 3,
+      "min_score": 75,
+      "max_score": 95,
+      "difficulty": 0.7
+    },
+    {
+      "id": "p002",
+      "name": "机器学习",
+      "credit": 3,
+      "min_score": 70,
+      "max_score": 92,
+      "difficulty": 0.8
+    },
+    {
+      "id": "p003",
+      "name": "云计算技术",
+      "credit": 2.5,
+      "min_score": 78,
+      "max_score": 96,
+      "difficulty": 0.5
+    },
+    {
+      "id": "p004",
+      "name": "大数据分析",
+      "credit": 3,
+      "min_score": 72,
+      "max_score": 90,
+      "difficulty": 0.6
+    },
+    {
+      "id": "p005",
+      "name": "移动应用开发",
+      "credit": 2.5,
+      "min_score": 80,
+      "max_score": 98,
+      "difficulty": 0.4
+    },
+    {
+      "id": "p006",
+      "name": "信息系统安全",
+      "credit": 2,
+      "min_score": 75,
+      "max_score": 93,
+      "difficulty": 0.6
+    }
+  ],
+  "targetScore": 87,
+  "version": "2.0"
+}
