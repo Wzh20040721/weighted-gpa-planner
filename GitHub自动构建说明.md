@@ -9,55 +9,56 @@
 ### 方式一：通过 Git Tag 触发（推荐）
 
 1. **初始化 Git 仓库**（如果还没有）
+
    ```bash
    git init
    git add .
    git commit -m "Initial commit"
    ```
-
 2. **创建 GitHub 仓库**
+
    - 访问 https://github.com/new
    - 创建一个新仓库（例如：weighted-gpa-planner）
    - 不要初始化 README
-
 3. **推送代码到 GitHub**
+
    ```bash
    git remote add origin https://github.com/你的用户名/仓库名.git
    git branch -M main
    git push -u origin main
    ```
-
 4. **创建并推送标签触发构建**
+
    ```bash
    # 创建版本标签
    git tag v2.0.0
-   
+
    # 推送标签到 GitHub（这会触发自动构建）
    git push origin v2.0.0
    ```
-
 5. **等待构建完成**
+
    - 访问你的 GitHub 仓库
    - 点击 "Actions" 标签
    - 查看构建进度（约 10-15 分钟）
-
 6. **下载构建产物**
+
    - 构建完成后，访问 "Releases" 页面
    - 下载对应平台的可执行文件
 
 ### 方式二：手动触发构建
 
 1. **推送代码到 GitHub**（同上）
-
 2. **手动触发工作流**
+
    - 访问你的 GitHub 仓库
    - 点击 "Actions" 标签
    - 选择 "Build Cross-Platform Executables" 工作流
    - 点击 "Run workflow" 按钮
    - 选择分支（通常是 main）
    - 点击 "Run workflow"
-
 3. **下载构建产物**
+
    - 构建完成后，在工作流运行页面
    - 滚动到底部的 "Artifacts" 部分
    - 下载对应平台的压缩包
@@ -67,12 +68,13 @@
 构建完成后会生成三个文件：
 
 - **Windows**: `加权平均分规划助手-Windows.zip`
+
   - 包含 `.exe` 可执行文件
-  
 - **macOS**: `加权平均分规划助手-macOS.zip`
+
   - 包含 `.app` 应用程序包
-  
 - **Linux**: `加权平均分规划助手-Linux.tar.gz`
+
   - 包含可执行文件
 
 ## 🔧 工作流配置说明
@@ -90,6 +92,7 @@ on:
 ### 构建矩阵
 
 同时在三个平台上构建：
+
 - Windows (windows-latest)
 - macOS (macos-latest)
 - Linux (ubuntu-latest)
@@ -108,6 +111,7 @@ on:
 ### 版本管理
 
 建议使用语义化版本号：
+
 ```bash
 git tag v2.0.0  # 主版本
 git tag v2.0.1  # 修复版本
@@ -117,6 +121,7 @@ git tag v2.1.0  # 功能更新
 ### 查看构建日志
 
 如果构建失败：
+
 1. 访问 Actions 页面
 2. 点击失败的工作流运行
 3. 查看详细日志
@@ -125,6 +130,7 @@ git tag v2.1.0  # 功能更新
 ### 本地测试
 
 在推送到 GitHub 之前，建议本地测试：
+
 ```bash
 # Windows
 build_windows.bat
@@ -137,6 +143,7 @@ build_windows.bat
 ### 1. 依赖项
 
 确保 `requirements.txt` 包含所有依赖：
+
 ```
 PyQt6==6.6.1
 PyQt6-Qt6==6.6.1
@@ -149,6 +156,7 @@ pyinstaller==6.3.0
 ### 2. build.spec 配置
 
 确保 `build.spec` 正确配置：
+
 - 入口文件：`main.py`
 - 应用名称：`加权平均分规划助手`
 - 单文件模式
@@ -157,11 +165,13 @@ pyinstaller==6.3.0
 ### 3. macOS 签名
 
 GitHub Actions 构建的 macOS 应用**未签名**，用户首次运行时需要：
+
 1. 右键点击应用
 2. 选择"打开"
 3. 点击"打开"确认
 
 或者在终端运行：
+
 ```bash
 xattr -cr 加权平均分规划助手.app
 ```
